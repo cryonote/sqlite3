@@ -417,7 +417,7 @@ namespace sqlite3 {
   }
 
   template <class K, class V>
-  struct sqlite3_map<K, V>::iterator::iterator& sqlite3_map<K, V>::iterator::operator=(iterator o)
+  typename sqlite3_map<K, V>::iterator::iterator& sqlite3_map<K, V>::iterator::operator=(iterator o)
   {
 #ifdef SQLITE3_MAP_DEBUG
     log_cursor(pStmt.get(), "assign start");
